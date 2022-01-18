@@ -3,7 +3,6 @@ package com.novi.flexrit.controller;
 import com.novi.flexrit.model.Trip;
 import com.novi.flexrit.service.TripService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.amqp.RabbitTemplateConfigurer;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
