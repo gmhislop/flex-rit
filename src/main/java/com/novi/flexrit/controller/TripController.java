@@ -39,7 +39,6 @@ public class TripController {
         }
 
     }
-
     @DeleteMapping("/trip/{id}")
     public ResponseEntity<String> deleteTrips(@PathVariable long id) {
         tripService.deleteTripsById(id);

@@ -26,7 +26,6 @@ public class TripService {
         return tripRepository.findById(id);
     }
 
-
     public void deleteTripsById(long id) {
         tripRepository.deleteById(id);
     }
