@@ -31,17 +31,18 @@ public class VehicleController {
 
     @GetMapping("/vehicle/{id}")
     public ResponseEntity<Vehicle> getVehicle(@PathVariable long id) {
-        Optional<Vehicle> vehicle = VehicleService.getVehicleById(id);
-        if(vehicle.isPresent()) {
+        Optional<Vehicle> vehicle = vehicleService.getVehicleById(id);
+        if (vehicle.isPresent()) {
             return ResponseEntity.ok(vehicle.get());
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
     }
+
     @DeleteMapping("/vehicle/{id}")
     public ResponseEntity<String> deleteVehicle(@PathVariable long id) {
-        VehicleService.deleteVehicleById(id);
+        vehicleService.deleteVehicleById(id);
         return ResponseEntity.ok("successfully deleted");
     }
 }

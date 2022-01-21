@@ -1,16 +1,13 @@
 package com.novi.flexrit.controller;
 
 import com.novi.flexrit.model.Subscription;
-import com.novi.flexrit.model.Trip;
+import com.novi.flexrit.model.SubscriptionPlan;
 import com.novi.flexrit.service.SubscriptionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import java.util.List;
 import java.util.Optional;
 
@@ -20,29 +17,59 @@ public class SubscriptionController {
     @Autowired
     SubscriptionService subscriptionService;
 
-    @GetMapping("subscription/")
-    public ResponseEntity<List<Subscription>> getSubscription() {
-        List<Subscription> subscription = subscriptionService.getSubscription();
-        return ResponseEntity.ok(subscription);
+    @GetMapping("subscription-plan")
+    public ResponseEntity<List<SubscriptionPlan>> getSubscriptionPlan() {
+        List<SubscriptionPlan> subscriptionPlan = subscriptionService.getSubscriptionPlan();
+        return ResponseEntity.ok(subscriptionPlan);
     }
-    @PostMapping("/subscription")
-    public ResponseEntity<String> addSubscription(@RequestBody Subscription subscription) {
-        subscriptionService.addSubscription(subscription);
+
+    @PostMapping("/subscription-plan")
+    public ResponseEntity<String> addSubscription(@RequestBody SubscriptionPlan subscriptionPlan) {
+        subscriptionService.addSubscriptionPlan(subscriptionPlan);
         return ResponseEntity.ok("data has been added");
     }
-    @GetMapping("/subscription/{id}")
-    public ResponseEntity<Subscription> getSubscription(@PathVariable long id) {
-        Optional<Subscription> subscription = subscriptionService.getSubscriptionById(id);
-        if(subscription.isPresent()) {
+
+    @GetMapping("/subscription-plan/{id}")
+    public ResponseEntity<SubscriptionPlan> getSubscription(@PathVariable long id) {
+        Optional<SubscriptionPlan> subscription = subscriptionService.getSubscriptionPlanById(id);
+        if (subscription.isPresent()) {
             return ResponseEntity.ok(subscription.get());
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
-    @DeleteMapping("/subscription/{id}")
+
+    @DeleteMapping("/subscription-plan/{id}")
     public ResponseEntity<String> deleteTrips(@PathVariable long id) {
-        subscriptionService.deleteSubscriptionById(id);
+        subscriptionService.deleteSubscriptionPlanById(id);
         return ResponseEntity.ok("successfully deleted");
     }
+
+    @PostMapping("/buy-subscription")
+    public ResponseEntity<String> buySubscription(@RequestBody Subscription subscription) {
+        boolean output = subscriptionService.buySubscription(subscription);
+        if (output) {
+            return ResponseEntity.ok("Bought subscription");
+        } else {
+            return ResponseEntity.ok("You Already have a subscription plan");
+        }
+    }
+
+    @PostMapping("/cancel-subscription")
+    public ResponseEntity<String> cancelSubscription(@RequestBody Subscription subscription) {
+        boolean output = subscriptionService.cancelSubscription(subscription);
+        if (output) {
+            return ResponseEntity.ok("Subscription for the user is cancelled");
+        } else {
+            return ResponseEntity.ok("Invalid subscription");
+        }
+    }
+
+    @GetMapping("subscription")
+    public ResponseEntity<List<Subscription>> getSubscription() {
+        List<Subscription> subscription = subscriptionService.getSubscription();
+        return ResponseEntity.ok(subscription);
+    }
+
 
 }

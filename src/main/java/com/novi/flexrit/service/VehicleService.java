@@ -13,7 +13,9 @@ public class VehicleService {
     @Autowired
     VehicleRepository vehicleRepository;
 
-    public List<Vehicle> getVehicle(){ return vehicleRepository.findAll();}
+    public List<Vehicle> getVehicle() {
+        return vehicleRepository.findAll();
+    }
 
     public void addVehicle(Vehicle vehicle) {
         vehicleRepository.save(vehicle);

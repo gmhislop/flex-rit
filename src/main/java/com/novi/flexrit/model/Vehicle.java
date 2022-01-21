@@ -4,14 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.time.LocalDateTime;
 
 @Entity
 public class Vehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long userId;
     private long vehicleId;
+    private long userId;
     private String type;
     private String model;
     private String brand;

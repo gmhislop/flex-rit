@@ -8,13 +8,13 @@ import java.time.LocalDateTime;
 
 @Entity
 public class Subscription {
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String type;
-    private long price;
-    private String description;
+    private long userId;
+    private long subscriptionPlanId;
+    private String status;
+    private LocalDateTime date;
 
     public long getId() {
         return id;
@@ -24,29 +24,35 @@ public class Subscription {
         this.id = id;
     }
 
-    public String getType() {
-        return type;
+    public long getUserId() {
+        return userId;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setUserId(long userId) {
+        this.userId = userId;
     }
 
-    public long getPrice() {
-        return price;
+    public long getSubscriptionPlanId() {
+        return subscriptionPlanId;
     }
 
-    public void setPrice(long price) {
-        this.price = price;
+    public void setSubscriptionPlanId(long subscriptionPlanId) {
+        this.subscriptionPlanId = subscriptionPlanId;
     }
 
-    public String getDescription() {
-        return description;
+    public String getStatus() {
+        return status;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
+    public LocalDateTime getDate() {
+        return date;
+    }
 
+    public void setDate(LocalDateTime date) {
+        this.date = date;
+    }
 }

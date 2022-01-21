@@ -18,8 +18,8 @@ public class TripController {
 
     @GetMapping("/trip")
     public ResponseEntity<List<Trip>> getTrips() {
-         List<Trip> trips = tripService.getTrips();
-         return ResponseEntity.ok(trips);
+        List<Trip> trips = tripService.getTrips();
+        return ResponseEntity.ok(trips);
     }
 
     @PostMapping("/trip")
@@ -31,13 +31,14 @@ public class TripController {
     @GetMapping("/trip/{id}")
     public ResponseEntity<Trip> getTrips(@PathVariable long id) {
         Optional<Trip> trips = tripService.getTripsById(id);
-        if(trips.isPresent()) {
+        if (trips.isPresent()) {
             return ResponseEntity.ok(trips.get());
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
     }
+
     @DeleteMapping("/trip/{id}")
     public ResponseEntity<String> deleteTrips(@PathVariable long id) {
         tripService.deleteTripsById(id);
