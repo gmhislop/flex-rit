@@ -2,7 +2,7 @@ package com.novi.flexrit.service;
 
 import com.novi.flexrit.model.Role;
 import com.novi.flexrit.model.User;
-import com.novi.flexrit.repository.UserDao;
+import com.novi.flexrit.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -23,12 +23,12 @@ public class UserService implements UserDetailsService {
     private RoleService roleService;
 
     @Autowired
-    private UserDao userDao;
+    private UserRepository userRepository;
 
 
 
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        User user = userDao.findByUsername(username);
+        User user = userRepository.findByUsername(username);
         if (user == null) {
             throw new UsernameNotFoundException("Invalid username or password.");
         }
@@ -45,31 +45,36 @@ public class UserService implements UserDetailsService {
 
     public List<User> findAll() {
         List<User> list = new ArrayList<>();
-        userDao.findAll().iterator().forEachRemaining(list::add);
+        userRepository.findAll().iterator().forEachRemaining(list::add);
         return list;
     }
 
 
     public User findOne(String username) {
-        return userDao.findByUsername(username);
+        return userRepository.findByUsername(username);
     }
 
 
     public User save(User user) {
+        // this is used for creating a bcryptEncoder object and then
+        // we call encode method on that by passing password
+
+        if(user.getPassword().length() < 10) {
+            throw new RuntimeException("Password doesn't meet the length requirement. MIN_LENGTH: 10");
+        }
+
+
+
         BCryptPasswordEncoder bcryptEncoder = new BCryptPasswordEncoder();
-        User nUser = user;
-        nUser.setPassword(bcryptEncoder.encode(user.getPassword()));
+        String password = user.getPassword();
+        String encodePassword = bcryptEncoder.encode(password);
+        user.setPassword(encodePassword);
 
         Role role = roleService.findByName("USER");
         Set<Role> roleSet = new HashSet<>();
         roleSet.add(role);
 
-        if (nUser.getEmail().split("@")[1].equals("admin.edu")) {
-            role = roleService.findByName("ADMIN");
-            roleSet.add(role);
-        }
-
-        nUser.setRoles(roleSet);
-        return userDao.save(nUser);
+        user.setRoles(roleSet);
+        return userRepository.save(user);
     }
 }

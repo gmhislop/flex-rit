@@ -1,7 +1,7 @@
 package com.novi.flexrit.service;
 
 import com.novi.flexrit.model.Role;
-import com.novi.flexrit.repository.RoleDao;
+import com.novi.flexrit.repository.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 public class RoleService {
 
     @Autowired
-    private RoleDao roleDao;
+    private RoleRepository roleRepository;
 
     public Role findByName(String name) {
-        Role role = roleDao.findRoleByName(name);
+        Role role = roleRepository.findRoleByName(name);
         return role;
     }
 }

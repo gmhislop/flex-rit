@@ -3,6 +3,9 @@ package com.novi.flexrit.service;
 import com.novi.flexrit.model.Trip;
 import com.novi.flexrit.repository.TripRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

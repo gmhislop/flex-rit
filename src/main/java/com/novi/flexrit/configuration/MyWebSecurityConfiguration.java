@@ -34,7 +34,7 @@ public class MyWebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().and().csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/users/authenticate", "git status").permitAll()
+                .antMatchers("/users/login", "/users/register").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 //.exceptionHandling().authenticationEntryPoint(unauthorizedEntryPoint).and()

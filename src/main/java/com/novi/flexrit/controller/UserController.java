@@ -2,7 +2,7 @@ package com.novi.flexrit.controller;
 
 import com.novi.flexrit.configuration.TokenProvider;
 import com.novi.flexrit.model.AuthToken;
-import com.novi.flexrit.model.LoginUser;
+import com.novi.flexrit.model.LoginDataHolder;
 import com.novi.flexrit.model.User;
 import com.novi.flexrit.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,16 +30,18 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/authenticate", method = RequestMethod.POST)
-    public ResponseEntity<?> generateToken(@RequestBody LoginUser loginUser) throws AuthenticationException {
-
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public ResponseEntity<?> login(@RequestBody LoginDataHolder loginDataHolder) throws AuthenticationException {
+        // validate username and password
         final Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
-                        loginUser.getUsername(),
-                        loginUser.getPassword()
+                        loginDataHolder.getUsername(),
+                        loginDataHolder.getPassword()
                 )
         );
+        // if validation result in success, set the authentication object to context
         SecurityContextHolder.getContext().setAuthentication(authentication);
+        // generate a jwt token from authentication object
         final String token = jwtTokenUtil.generateToken(authentication);
         return ResponseEntity.ok(new AuthToken(token));
     }
@@ -48,11 +50,4 @@ public class UserController {
     public User saveUser(@RequestBody User user) {
         return userService.save(user);
     }
-
-    @PreAuthorize("hasRole('USER')")
-    @RequestMapping(value = "/userping", method = RequestMethod.GET)
-    public String userPing() {
-        return "Any User Can Read This";
-    }
-
 }

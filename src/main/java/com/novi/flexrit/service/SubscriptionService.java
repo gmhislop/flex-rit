@@ -25,6 +25,9 @@ public class SubscriptionService {
     }
 
     public void addSubscriptionPlan(SubscriptionPlan subscriptionPlan) {
+        if(subscriptionPlan.getType() == null) {
+            throw new RuntimeException("Type should be present for subscription");
+        }
         subscriptionPlanRepository.save(subscriptionPlan);
     }
 
