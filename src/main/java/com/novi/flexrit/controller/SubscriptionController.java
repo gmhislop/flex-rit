@@ -1,5 +1,6 @@
 package com.novi.flexrit.controller;
 
+import com.novi.flexrit.dto.SubscriptionDTO;
 import com.novi.flexrit.model.Subscription;
 import com.novi.flexrit.model.SubscriptionPlan;
 import com.novi.flexrit.service.SubscriptionService;
@@ -46,7 +47,7 @@ public class SubscriptionController {
     }
 
     @PostMapping("/buy-subscription")
-    public ResponseEntity<String> buySubscription(@RequestBody Subscription subscription) {
+    public ResponseEntity<String> buySubscription(@RequestBody SubscriptionDTO subscription) {
         boolean output = subscriptionService.buySubscription(subscription);
         if (output) {
             return ResponseEntity.ok("Bought subscription");
