@@ -1,6 +1,9 @@
 package com.novi.flexrit.model;
 
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -16,9 +19,9 @@ public class Trip {
     private double toLocationLongitude;
     private LocalDateTime date;
     private double distance;
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER)
     private User user;
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Vehicle vehicle;
 
     public long getTripId() {

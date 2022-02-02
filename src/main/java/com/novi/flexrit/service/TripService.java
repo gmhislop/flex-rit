@@ -49,7 +49,6 @@ public class TripService {
         t1.setToLocationLongitude(trip.getToLocationLongitude());
         t1.setDistance(distance(trip.getFromLocationLatitude(), trip.getToLocationLatitude(), trip.getFromLocationLongitude(), trip.getToLocationLongitude()));
         t1.setDate(trip.getDate());
-        t1.setUser(trip.getUser());
         t1.setVehicle(vehicle.get());
         tripRepository.save(t1);
     }
@@ -62,7 +61,7 @@ public class TripService {
         tripRepository.deleteById(id);
     }
 
-    public static double distance(double lat1,
+    private static double distance(double lat1,
                                   double lat2, double lon1,
                                   double lon2)
     {
