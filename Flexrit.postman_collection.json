@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "efa23bf6-b756-43b3-9f61-2fe06c79817d",
+		"name": "Flexrit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "For registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"password\": \"abc123456\",\n    \"email\": \"novi@gmail.com\",\n    \"phone\": \"123456789\",\n    \"name\": \"novi\",\n    \"username\": \"novi\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5432/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5432",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "For login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"novi\",\n    \"password\": \"abc123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5432/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5432",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post vehicle",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"hatchback\",\n    \"model\": \"i20\",\n    \"brand\": \"hundai\",\n    \"licensePlate\": \"TS152340\",\n    \"mileage\": \"12\",\n    \"yearOfMake\": \"2022\",\n    \"userId\": 1\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5432/vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5432",
+					"path": [
+						"vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post trip",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3MzA4NzYsImV4cCI6MTY0Mzc0ODg3Nn0.-963guBfTvx2x74xvFBm58Q8KWcIC3_g8LExmh3f8G8",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 59.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2,\n    \"date\":\"2017-01-13T17:09:42.411\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/trip",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get vehicle",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5432/vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5432",
+					"path": [
+						"vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get trip",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3MzExNzcsImV4cCI6MTY0Mzc0OTE3N30.Kjj4KI8o59lNDDHhkHlM0wgynYDZY-QsdqU_p3f3HXw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5432/trip",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5432",
+					"path": [
+						"trip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get report",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5432/report?userId=1&year=2020",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5432",
+					"path": [
+						"report"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						},
+						{
+							"key": "year",
+							"value": "2020"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete trip",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5432/trip/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5432",
+					"path": [
+						"trip",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
