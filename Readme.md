@@ -37,18 +37,19 @@ Software required:
 
 There are several ways to clone a Git repository to your local machine. You can use HTTPS or SSH, amongst other options. When we click the clipboard icon, the URL will be copied to our clipboard.
 ![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/import%20https%20repo.png)
+
 ![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/repo%20link%20.png)
 
 - **Option B**
-
-![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/import%20file%20github%20zip.png)
-
-![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/Import%20file%20git%20hub.png)
 1. Download the zip.
 2. Launch IntelliJ IDEA.
 3. If the Welcome screen opens, click Open.
 4. Otherwise, from the main menu, select File | Open.
 5. In the dialog that opens, select the directory in which your sources, libraries, and other assets are located and click Open.
+
+![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/import%20file%20github%20zip.png)
+
+![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/Import%20file%20git%20hub.png)
 
 >Now IntelliJ will show the project and let it complete loading and indexing
 
@@ -98,7 +99,6 @@ INSERT INTO role. Run those two sql. Now role table will have 2 rows with USER a
 ### 3. Configurating Postman
 
 
-![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/Postman%20import.png)
 Launch Postman.
 1. To open the Postman application, click on its icon on the taskbar.
 2. Click on the file tab or the button next to My Workspace and then click import.
@@ -108,6 +108,7 @@ Launch Postman.
 
 
 ![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/Postman%20import.png)
+
 By executing the following requests you can make sure everything works properly:
 
 **User Registration**
@@ -120,3 +121,4 @@ Run a login request by providing the username and password which you used while 
 Click on add Vehicle Request. Paste the copied token to the header authorization value.
 Send the request. This will add a vehicle to the database.
 
+![](https://github.com/gmhislop/flex-rit/blob/69d1d39430b87a0cec6820ebe2ae388777a68638/Images/Postman%20request.png)
