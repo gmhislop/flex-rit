@@ -1,6 +1,6 @@
-# Introduction
+# Introduction FlexRit
 
-FlexRit, a vehicle journey registration application that allows the end user to easily and quickly enter and keep track of kilometers traveled by car. By using this application, the end user can manually enter all trips made during a work period. After entering the departure and arrival address, a calculation is automatically made of the total kilometers traveled. The purpose of this application is to collect the entered data and convert it into a clear report, so that this could be used for the end user's own administration.
+FlexRit, is a vehicle journey registration application that allows the end user to easily and quickly enter and keep track of kilometers traveled by car. By using this application, the end user can manually enter all trips made during a work period. After entering the departure and arrival address, a calculation is automatically made of the total kilometers traveled. The purpose of this application is to collect the entered data and convert it into a clear report, so that this could be used for the end user's own administration.
 
 ### This project built using Java and the following tools:
 
@@ -23,12 +23,12 @@ See Appendix A
 Software required:
 
 - Java Development Kit (JDK) version 8 or newer.
-- Intellij (or
+- IntelliJ
 - Git
 - PostgreSQL Database
 - Postman
 
-# Step to set-up
+# Step to set up
 
 ### 1. Clone the application
 
@@ -37,6 +37,8 @@ Software required:
 
 There are several ways to clone a Git repository to your local machine. You can use HTTPS or SSH, amongst other options. When we click the clipboard icon, the URL will be copied to our clipboard.
 ![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/import%20https%20repo.png)
+
+After that go to the top menu > GIT > Clone and insert the link at the first line and add the destination file to the second
 
 ![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/repo%20link%20.png)
 
