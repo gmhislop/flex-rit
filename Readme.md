@@ -36,14 +36,14 @@ Software required:
 - **Option A**
 
 There are several ways to clone a Git repository to your local machine. You can use HTTPS or SSH, amongst other options. When we click the clipboard icon, the URL will be copied to our clipboard.
-![](Images/import https repo.png)
-![](Images/repo link .png)
+![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/import%20https%20repo.png)
+![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/repo%20link%20.png)
 
 - **Option B**
 
-![](Images/import file github zip.png)
+![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/import%20file%20github%20zip.png)
 
-![](Images/Import file git hub.png)
+![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/Import%20file%20git%20hub.png)
 1. Download the zip.
 2. Launch IntelliJ IDEA.
 3. If the Welcome screen opens, click Open.
@@ -98,7 +98,7 @@ INSERT INTO role. Run those two sql. Now role table will have 2 rows with USER a
 ### 3. Configurating Postman
 
 
-![](Images/Postman import.png)
+![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/Postman%20import.png)
 Launch Postman.
 1. To open the Postman application, click on its icon on the taskbar.
 2. Click on the file tab or the button next to My Workspace and then click import.
@@ -107,7 +107,7 @@ Launch Postman.
    ```/flexrit/Flexrit.postman_collection.json```
 
 
-![](Images/Postman request.png)
+![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/Postman%20import.png)
 By executing the following requests you can make sure everything works properly:
 
 **User Registration**
