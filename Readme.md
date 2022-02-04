@@ -5,6 +5,7 @@ FlexRit, is a vehicle journey registration application that allows the end user 
 ### This project built using Java and the following tools:
 
 - IntelliJ IDEA
+- Java Development Kit (JDK) version 16
 - Spring Boot as server side framework
 - Maven as build automation tool
 - Hibernate as ORM / JPA implementation
@@ -17,7 +18,7 @@ FlexRit, is a vehicle journey registration application that allows the end user 
 
 ### Use-case diagram
 The use-case diagram provides insight into which actors play a role and what their relationship is to the various parts of the system.
-See Appendix A
+Click <a href="https://github.com/gmhislop/flex-rit/blob/e15a6fc09af3ca45db1bf8ff0abfd21b34d769bc/Images/Communication%20Diagram1.png" target="_top">here</a> to download the UML diagram.
 
 ### Installation
 Software required:
