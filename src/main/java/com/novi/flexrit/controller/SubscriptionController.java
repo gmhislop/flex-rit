@@ -66,7 +66,7 @@ public class SubscriptionController {
         }
     }
 
-    @GetMapping("subscription")
+    @GetMapping("/subscription")
     public ResponseEntity<List<Subscription>> getSubscription() {
         List<Subscription> subscription = subscriptionService.getSubscription();
         return ResponseEntity.ok(subscription);
