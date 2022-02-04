@@ -28,17 +28,22 @@ Software required:
 - PostgreSQL Database
 - Postman
 
-# Step to setup
+# Step to set-up
 
 ### 1. Clone the application
 
-**The following two way**
 
 - **Option A**
 
 There are several ways to clone a Git repository to your local machine. You can use HTTPS or SSH, amongst other options. When we click the clipboard icon, the URL will be copied to our clipboard.
+![](Images/import https repo.png)
+![](Images/repo link .png)
 
 - **Option B**
+
+![](Images/import file github zip.png)
+
+![](Images/Import file git hub.png)
 1. Download the zip.
 2. Launch IntelliJ IDEA.
 3. If the Welcome screen opens, click Open.
@@ -51,8 +56,8 @@ There are several ways to clone a Git repository to your local machine. You can 
 
 Open ```src/main/resources/application.properties ```
 
-Please update the application properties with your database specific properties
-Spring.url, Username and Password with user details. Change mysql username and password as per your installation.
+>Please update the application properties with your database specific properties
+Spring.url, Username and Password with user details. Change PostgreSQL username and password as per your installation.
 Replace {{INSERT_NAME_DB}} with the name of your DATABASE.
 
 
@@ -93,14 +98,16 @@ INSERT INTO role. Run those two sql. Now role table will have 2 rows with USER a
 ### 3. Configurating Postman
 
 
+![](Images/Postman import.png)
 Launch Postman.
-
 1. To open the Postman application, click on its icon on the taskbar.
-2. Click on the file tab and then click import.
+2. Click on the file tab or the button next to My Workspace and then click import.
 3. Choose the method you want to import an item.
 4. Choose the correct item to import and press open. Postman will automatically import the item.
    ```/flexrit/Flexrit.postman_collection.json```
 
+
+![](Images/Postman request.png)
 By executing the following requests you can make sure everything works properly:
 
 **User Registration**
