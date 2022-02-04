@@ -1,22 +1,21 @@
 package com.novi.flexrit.service;
 
 import com.novi.flexrit.dto.TripDTO;
-import com.novi.flexrit.exception.BadRequestException;
 import com.novi.flexrit.model.Trip;
 import com.novi.flexrit.model.User;
 import com.novi.flexrit.model.Vehicle;
 import com.novi.flexrit.repository.TripRepository;
 import com.novi.flexrit.repository.UserRepository;
 import com.novi.flexrit.repository.VehicleRepository;
+import static org.junit.Assert.*;
+
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.List;
 import java.util.Optional;
