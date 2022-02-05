@@ -18,7 +18,7 @@ FlexRit, is a vehicle journey registration application that allows the end user 
 
 ### Use-case diagram
 The use-case diagram provides insight into which actors play a role and what their relationship is to the various parts of the system.
-Click <a href="https://github.com/gmhislop/flex-rit/blob/4ad6c7be41eac99757573e67db840915b19aff13/Images/sequence%20diagram.vpd-Page-2.pdf" target="_top">here</a> to download the UML diagram.
+Click <a href="https://github.com/gmhislop/flex-rit/blob/31e352a142eb2c2f487f5ac95bf8320c159c9353/Images/sequence%20diagram.vpd-Page-2%20(1).png" target="_top">here</a> to download the UML Sequence diagram.
 
 ### Installation
 Software required:
