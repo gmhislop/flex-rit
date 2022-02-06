@@ -121,10 +121,15 @@ This will register a user. Then run login it will generate ```Bearer authenticat
 Authorization: Bearer
 
 **User login**
-Run a login request by providing the username and password which you used while registration. It will generate a token. Copy this token as this will be used in further steps.
+Run a login request by providing the username and password which you used while registration. It will generate a token. Copy this token as this will be used in further steps. Paste the token at the ```HEADER``` section. 
+   
+![](https://github.com/gmhislop/flex-rit/blob/b12601eb97f7ad939d81ce9aacebd7642b0b2d18/Images/Token%20instructions.png)   
 
 **Add Vehicle**
 Click on add Vehicle Request. Paste the copied token to the header authorization value.
 Send the request. This will add a vehicle to the database.
 
 ![](https://github.com/gmhislop/flex-rit/blob/69d1d39430b87a0cec6820ebe2ae388777a68638/Images/Postman%20request.png)
+   
+# The ```HTTP Status 200 (OK)``` status code indicates that the request has been processed successfully on the server.
+# TAKE YOU FOR YOUR TIME && ENJOY THE APPLICATION
