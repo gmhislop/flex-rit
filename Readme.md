@@ -67,8 +67,8 @@ Replace {{INSERT_NAME_DB}} with the name of your DATABASE.
 
 ```
 spring.datasource.url=jdbc:postgresql://localhost:5432/{{INSERT_NAME_DB}}
-spring.datasource.username=postgres
-spring.datasource.password=root
+spring.datasource.username={{INSERT_USERNAME_DB}}
+spring.datasource.password={{INSERT_PASSWORD_DB}}
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.show-sql=true
 jwt.token.validity=18000
@@ -89,6 +89,7 @@ Copy the following 2 insert statements and paste them into the Query editor at `
 
 
 ```
+INSERT INTO role
 (role_id, description, name)
 VALUES(0, 'ADMIN', 'ADMIN');
 
