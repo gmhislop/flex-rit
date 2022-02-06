@@ -39,7 +39,7 @@ Software required:
 There are several ways to clone a Git repository to your local machine. You can use HTTPS or SSH, amongst other options. When we click the clipboard icon, the URL will be copied to our clipboard.
 ![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/import%20https%20repo.png)
 
-After that, go to the top menu > GIT > Clone and insert the link at the first line and add the destination file to the second
+After that, go to the top menu > GIT > Clone and insert the link at the first line and add the file destination to the second
 
 ![](https://github.com/gmhislop/flex-rit/blob/6c6a4cc4cdb85011405f4b46149ffe9327a18d72/Images/repo%20link%20.png)
 
