@@ -20,12 +20,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5432/users/register",
+					"raw": "http://localhost:8080/users/register",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5432",
+					"port": "8080",
 					"path": [
 						"users",
 						"register"
@@ -49,15 +49,125 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5432/users/login",
+					"raw": "http://localhost:8080/users/login",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5432",
+					"port": "8080",
 					"path": [
 						"users",
 						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users | all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get users | id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/{userId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"{userId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete users | id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users/{userId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"{userId}"
 					]
 				}
 			},
@@ -84,14 +194,124 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5432/vehicle",
+					"raw": "http://localhost:8080/vehicle",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5432",
+					"port": "8080",
 					"path": [
 						"vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get vehicle | all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vehicle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get vehicle | id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vehicle/{vehicleId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle",
+						"{vehicleId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete vehicle | id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vehicle/{vehicleId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vehicle",
+						"{vehicleId}"
 					]
 				}
 			},
@@ -132,82 +352,7 @@
 			"response": []
 		},
 		{
-			"name": "get users",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
-						"type": "default"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/users/",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"users",
-						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "get vehicle",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
-						"type": "default"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:5432/vehicle",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5432",
-					"path": [
-						"vehicle"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "get trip",
+			"name": "get trip | all",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -230,12 +375,12 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5432/trip",
+					"raw": "http://localhost:8080/trip",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5432",
+					"port": "8080",
 					"path": [
 						"trip"
 					]
@@ -244,7 +389,329 @@
 			"response": []
 		},
 		{
-			"name": "get report",
+			"name": "get trip | id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3MzExNzcsImV4cCI6MTY0Mzc0OTE3N30.Kjj4KI8o59lNDDHhkHlM0wgynYDZY-QsdqU_p3f3HXw",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/trip/{tripId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trip",
+						"{tripId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete trip | id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/trip/{tripId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trip",
+						"{tripId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buy subscription",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/buy-subscription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"buy-subscription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancel subscription",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/cancel-subscription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cancel-subscription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post subscription plan",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/subscription-plan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscription-plan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get subscription plan | id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/subscription-plan/{subscriptionPlanId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscription-plan",
+						"{subscriptionPlanId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get subscription",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/subscription",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscription"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete subscription plan | id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/subscription-plan/{subscriptionPlanId}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscription-plan",
+						"{subscriptionPlanId}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get subscription plan | all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/subscription-plan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subscription-plan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get report | id | year",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -267,33 +734,84 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5432/report?userId=1&year=2020",
+					"raw": "http://localhost:8080/report?userId={id}&year={year}",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5432",
+					"port": "8080",
 					"path": [
 						"report"
 					],
 					"query": [
 						{
 							"key": "userId",
-							"value": "1"
+							"value": "{id}"
 						},
 						{
 							"key": "year",
-							"value": "2020"
+							"value": "{year}"
 						}
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "get report | id | year",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/report?userId=1&year=2022",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"report"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								},
+								{
+									"key": "year",
+									"value": "2022"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
 		},
 		{
-			"name": "delete trip",
+			"name": "get report | id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
-				"method": "DELETE",
+				"method": "GET",
 				"header": [
 					{
 						"key": "Authorization",
@@ -303,7 +821,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"fromLocationLatitude\": 53.32055555555556,\n    \"fromLocationLongitude\": -1.7297222222222221,\n    \"toLocationLatitude\": 53.31861111111111,\n    \"toLocationLongitude\": -1.6997222222222223,\n    \"userId\": 1,\n    \"vehicleId\": 2\n\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -311,19 +829,68 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5432/trip/5",
+					"raw": "http://localhost:8080/report?userId={id}",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5432",
+					"port": "8080",
 					"path": [
-						"trip",
-						"5"
+						"report"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "{id}"
+						}
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "get report | id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJub3ZpIiwicm9sZXMiOiJST0xFX1VTRVIiLCJpYXQiOjE2NDM3Mjk3MDQsImV4cCI6MTY0Mzc0NzcwNH0.eFR2j1fwnNDQGwEEApl-GrSwSO0K2vi6hqb-eO91TuY",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/report?userId=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"report"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
 		}
 	],
 	"auth": {
@@ -347,6 +914,16 @@
 					""
 				]
 			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "{subscriptionPlanId}"
+		},
+		{
+			"key": "{id}",
+			"value": "1"
 		}
 	]
 }
