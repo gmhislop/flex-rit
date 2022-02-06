@@ -18,7 +18,7 @@ public static void main(String[] args) {
 ```
 
 # Voorwoord
-Dit document is de uitleg en verantwoording van de ontwikkeling van een Java Object Oriented Programming Backend applicatie, die is ontwikkeld in het kader van de opleiding Full Stack Development aan de Hogeschool Novi. Tijdens het project richt de student zich op het bouwen van een backend van een webapplicatie aan de hand van bijgeleverde casus of naar eigen invulling een idee voor een webapplicatie. Dit zorgt ervoor de theorie volledig tot een uiting komt in de praktijk. Het project vergde een hoge mate aan zelfstandigheid en zelfstudie waarbij er gestructureerd moeten worden gekeken naar de mogelijkheden om het idee te realiseren binnen de gewenste tijd.
+Dit document is de uitleg en verantwoording van de ontwikkeling van een Java Object Oriented Programming Backend applicatie, die ontwikkeld is in het kader van de opleiding Full Stack Development aan de Hogeschool Novi. Tijdens het project richt de student zich op het bouwen van een backend van een webapplicatie aan de hand van bijgeleverde casus of naar eigen invulling een idee voor een webapplicatie. Dit zorgt ervoor de theorie volledig tot een uiting komt in de praktijk. Het project vergde een hoge mate aan zelfstandigheid en zelfstudie waarbij er gestructureerd moeten worden gekeken naar de mogelijkheden om het idee te realiseren binnen de gewenste tijd.
 
 
 # Inhoudsopgave
