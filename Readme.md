@@ -131,5 +131,5 @@ Send the request. This will add a vehicle to the database.
 
 ![](https://github.com/gmhislop/flex-rit/blob/69d1d39430b87a0cec6820ebe2ae388777a68638/Images/Postman%20request.png)
    
-# The ```HTTP Status 200 (OK)``` status code indicates that the request has been processed successfully on the server.
+### The ```HTTP Status 200 (OK)``` status code indicates that the request has been processed successfully on the server.
 # TAKE YOU FOR YOUR TIME && ENJOY THE APPLICATION
