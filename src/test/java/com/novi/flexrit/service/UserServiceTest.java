@@ -18,16 +18,14 @@ import java.util.Set;
 import static org.mockito.ArgumentMatchers.any;
 
 @SpringBootTest
-public class UserServiceTest  {
-
-    @MockBean
-    private RoleService roleService;
-
-    @MockBean
-    private UserRepository userRepository;
+public class UserServiceTest {
 
     @Autowired
     UserService userService;
+    @MockBean
+    private RoleService roleService;
+    @MockBean
+    private UserRepository userRepository;
 
     @Test
     public void testsave() {
@@ -50,7 +48,7 @@ public class UserServiceTest  {
         Mockito.when(userRepository.save(any())).thenReturn(user);
 
         try {
-           userService.save(user);
+            userService.save(user);
         } catch (BadRequestException e) {
             Assertions.assertEquals("Password length should be between 8 to 15 characters", e.getMessage());
         }

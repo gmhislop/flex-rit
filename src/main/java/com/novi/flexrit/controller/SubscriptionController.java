@@ -41,7 +41,7 @@ public class SubscriptionController {
     }
 
     @DeleteMapping("/subscription-plan/{id}")
-    public ResponseEntity<String> deleteTrips(@PathVariable long id) {
+    public ResponseEntity<String> deleteSubscription(@PathVariable long id) {
         subscriptionService.deleteSubscriptionPlanById(id);
         return ResponseEntity.ok("successfully deleted");
     }

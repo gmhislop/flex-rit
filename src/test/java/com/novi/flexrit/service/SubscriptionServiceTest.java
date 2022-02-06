@@ -9,7 +9,6 @@ import com.novi.flexrit.repository.SubscriptionRepository;
 import com.novi.flexrit.repository.UserRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,7 +17,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 
 @SpringBootTest
@@ -66,7 +64,7 @@ public class SubscriptionServiceTest {
 
         try {
             subscriptionService.buySubscription(subscriptionDTO);
-        } catch (Exception e ){
+        } catch (Exception e) {
             Assertions.assertEquals("Invalid user ID", e.getMessage());
         }
 

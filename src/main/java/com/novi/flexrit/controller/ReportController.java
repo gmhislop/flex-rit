@@ -29,15 +29,15 @@ public class ReportController {
     @GetMapping("/report")
     public ResponseEntity<ReportDTO> getReport(@RequestParam("userId") long userId, @RequestParam(value = "year", required = false) Integer year) {
         Optional<User> user = userRepository.findById(userId);
-        if(user.isEmpty()) {
+        if (user.isEmpty()) {
             throw new BadRequestException("Invalid userId");
         }
         List<Trip> tripList = tripRepository.findByUser(user.get());
         List<Trip> filteredList = new ArrayList<>();
         double totalDistance = 0;
-        for (Trip trip :tripList){
-            if(year !=  null) {
-                if(Objects.nonNull(trip.getDate()) && trip.getDate().getYear() == year) {
+        for (Trip trip : tripList) {
+            if (year != null) {
+                if (Objects.nonNull(trip.getDate()) && trip.getDate().getYear() == year) {
                     filteredList.add(trip);
                     totalDistance = totalDistance + trip.getDistance();
                 }
@@ -52,7 +52,7 @@ public class ReportController {
         reportDTO.setUserId(userId);
         reportDTO.setTotalDistance(totalDistance);
         reportDTO.setTrips(filteredList);
-    return ResponseEntity.ok(reportDTO);
+        return ResponseEntity.ok(reportDTO);
 
     }
 }

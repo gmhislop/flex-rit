@@ -55,8 +55,8 @@ public class SubscriptionService {
 
         Optional<SubscriptionPlan> subscriptionPlan = subscriptionPlanRepository.findById(subscription.getSubscriptionPlanId());
 
-        if(subscriptionPlan.isEmpty()) {
-            throw  new BadRequestException("Invalid Subscription PLAN");
+        if (subscriptionPlan.isEmpty()) {
+            throw new BadRequestException("Invalid Subscription PLAN");
         }
         List<Subscription> subscriptions = subscriptionRepository.findByUser(user.get());
         for (Subscription sub : subscriptions) {

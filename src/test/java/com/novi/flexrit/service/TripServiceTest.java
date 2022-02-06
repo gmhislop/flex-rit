@@ -7,8 +7,6 @@ import com.novi.flexrit.model.Vehicle;
 import com.novi.flexrit.repository.TripRepository;
 import com.novi.flexrit.repository.UserRepository;
 import com.novi.flexrit.repository.VehicleRepository;
-import static org.junit.Assert.*;
-
 import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -52,7 +50,7 @@ public class TripServiceTest {
         Mockito.when(userRepository.findById(any())).thenReturn(Optional.empty());
         Mockito.when(vehicleRepository.findById(any())).thenReturn(Optional.of(vehicle));
         //Mockito.when(tripRepository.save(any())).then()
-        try{
+        try {
             tripService.addTrip(new TripDTO());
         } catch (Exception e) {
             Assertions.assertEquals("Invalid user ID", e.getMessage());

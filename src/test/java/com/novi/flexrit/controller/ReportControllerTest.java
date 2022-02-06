@@ -8,7 +8,6 @@ import com.novi.flexrit.repository.TripRepository;
 import com.novi.flexrit.repository.UserRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -51,7 +50,7 @@ public class ReportControllerTest {
 
         ResponseEntity<ReportDTO> result = reportController.getReport(1234, null);
 
-        Assertions.assertEquals(10 , result.getBody().getTotalDistance());
+        Assertions.assertEquals(10, result.getBody().getTotalDistance());
 
 
     }

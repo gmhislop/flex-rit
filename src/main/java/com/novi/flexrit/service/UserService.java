@@ -1,6 +1,7 @@
 package com.novi.flexrit.service;
 
 import com.novi.flexrit.exception.BadRequestException;
+import com.novi.flexrit.exception.InvalidPasswordException;
 import com.novi.flexrit.model.Role;
 import com.novi.flexrit.model.User;
 import com.novi.flexrit.repository.UserRepository;
@@ -58,11 +59,14 @@ public class UserService implements UserDetailsService {
     public User save(User user) {
         // this is used for creating a bcryptEncoder object, and then
         // we call encode method on that by passing password
-
+        User byUsername = userRepository.findByUsername(user.getUsername());
+        if(byUsername != null) {
+            throw  new BadRequestException("username is already taken");
+        }
 
         if ((user.getPassword().length() < 8)
                 || (user.getPassword().length() >= 15)) {
-            throw new BadRequestException("Password length should be between 8 to 15 characters");
+            throw new InvalidPasswordException("Password length should be between 8 to 15 characters");
         }
 
         BCryptPasswordEncoder bcryptEncoder = new BCryptPasswordEncoder();

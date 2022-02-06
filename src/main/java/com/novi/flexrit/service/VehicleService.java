@@ -1,7 +1,7 @@
 package com.novi.flexrit.service;
 
 import com.novi.flexrit.dto.VehicleDTO;
-import com.novi.flexrit.exception.BadRequestException;
+import com.novi.flexrit.exception.UserNotFoundException;
 import com.novi.flexrit.model.User;
 import com.novi.flexrit.model.Vehicle;
 import com.novi.flexrit.repository.UserRepository;
@@ -26,7 +26,7 @@ public class VehicleService {
     public void addVehicle(VehicleDTO vehicle) {
         Optional<User> user = userRepository.findById(vehicle.getUserId());
         if (user.isEmpty()) {
-            throw new BadRequestException("Invalid user ID");
+            throw new UserNotFoundException("Invalid user ID");
         }
         Vehicle v1 = new Vehicle();
         v1.setUser(user.get());
