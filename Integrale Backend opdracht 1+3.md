@@ -32,7 +32,11 @@ Dit document is de uitleg en verantwoording van de ontwikkeling van een Java Obj
 7. Opzetten Github/Git
 8. Installeren Spring boot, Maven
 9. Opzetten Postman
-
+10. Onderzoek en installeren Database
+11. Unit Testing
+12. Technisch ontwerp
+13. Opstellen Installatie Handleiding
+14. Bronnen
 
 # 1. Inleiding
 In dit verslag worden de resultaten, conclusies en aanbevelingen besproken die zijn voortgekomen uit het vooronderzoek voor de Integrale Eindopdracht Back End van de Back-end leerlijn aan de Hogeschool Novi. In de eerste hoofdstukken worden de onderzoeksmethode, doelstellingen en de technische ontwerpkeuzes van deze opdracht toegelicht. 
@@ -54,7 +58,7 @@ De webapplicatie moet minimaal voldoen aan de volgende eisen:
 
 Voordat wij akkoord kregen om te beginnen werd er eerst aandacht besteedt aan de ideefase. De studenten kregen de gelegenheid om 3-5 ideeën voor te stellen en gelijktijdig na te denken over onderwerpen zoals use cases, user rollen en haalbaarheid. In het volgend hoofdstuk zal ik volledig toelichten hoe mijn proces verlopen is en tegen welke dilemma's ik aanliep.
 
-# 3. Ideefase  
+# 3. Conceptfase  
 Zoals eerder benoemd kon ik pas aan de slag met de daadwerkelijke opdracht bij goedkeuring van het idee. Ik stelde de volgende ideeën voor om te ontwikkelen:
 
 **Concept 1** - Een stem applicatie waarin gebruikers in de vorm van een community kunnen stemmen op bepaalde kledingstukken en/of combinaties. Wanneer een gebruiker twijfelt aan een bepaald kledingstuk, kan deze makkelijk en snel worden beoordeeld door een collectieve groep aan gebruikers.
@@ -112,7 +116,7 @@ In deze fase zullen er verschillende onderdelen en functies van het nieuw te ont
 Ik heb voornamelijk gekeken naar de praktische kant van mijn applicatie en na mijn eerste UML kwam ik tot de conclusie dat ik ook rekening moet houden met het veilig opslaan van data. Mijn eerst UML zag er namelijk zo uit dat de Admin rol werkelijk overal bij kon en alles uiteindelijk ben ik erachter gekomen dat dit in de praktijk helemaal niet aan de orde is, zeker niet in de tijd waar wij nu in leven (zie bijlage A voor de eerste versie van het UML diagram). 
 
 ### Mijn eerste UML Use-case diagram bestond uit:
-Klik hier om de <a href="https://github.com/gmhislop/flex-rit/blob/31e352a142eb2c2f487f5ac95bf8320c159c9353/Images/Communication%20Diagram1.pdf" target="_top">```UML Use-case Diagram``` versie 1</a> te bekijken
+Klik hier om <a href="https://github.com/gmhislop/flex-rit/blob/31e352a142eb2c2f487f5ac95bf8320c159c9353/Images/Communication%20Diagram1.pdf" target="_top">```UML Use-case Diagram``` </a>versie 1 te bekijken
 
 ```
 USER          | REGISTER (POST, PUT).
@@ -126,7 +130,7 @@ ADMIN/ USER   | SUBSCRIPTION MANAGEMENT RECORD (GET, PUT, POST AND DELETE)
 ```
 
 ### Na verbetering zag de UML Use-case diagram er zo uit:
-Klik hier de <a href="https://github.com/gmhislop/flex-rit/blob/31e352a142eb2c2f487f5ac95bf8320c159c9353/Images/Communication%20Diagram1.png" target="_top">```UML Use-case Diagram``` versie 2</a> te bekijken
+Klik hier om <a href="https://github.com/gmhislop/flex-rit/blob/31e352a142eb2c2f487f5ac95bf8320c159c9353/Images/Communication%20Diagram1.png" target="_top">```UML Use-case Diagram``` </a>versie 2 te bekijken
 
 ```
 User          | Register (POST, PUT).
@@ -146,7 +150,7 @@ Admin/ User   | Vehicle management record (GET, PUT, POST and DELETE)
 ##### UML sequentiediagram
 Het is voor de eindgebruiker of admin niet van groot belang om alle gegevens in te zien of bepaalde handelingen uit te voeren als rekeningoverzicht verwijderen. In de praktijk wordt er namelijk een verzoek ingediend zodat de eindgebruiker met een versleutelde wachtwoord en gebruikersnaam kan inloggen. Een UML moet simpel en begrijpelijk zijn en een goed idee geven van de primaire functies van een applicatie. Persoonlijk vind een sequentiediagram duidelijke wanneer er in een team gewerkt wordt en het specifiek gaat over het vertalen van een bepaalde functionaliteit. 
 
-Klik hier <a href="https://github.com/gmhislop/flex-rit/blob/6cb7384515ed4d4b9441354a88b952c5b3554920/Images/sequence%20diagram.vpd-Page-2%20(1).png" target="_top">```UML Sequence Diagram```</a> om de  te bekijken
+Klik hier om <a href="https://github.com/gmhislop/flex-rit/blob/6cb7384515ed4d4b9441354a88b952c5b3554920/Images/sequence%20diagram.vpd-Page-2%20(1).png" target="_top">```UML Sequence Diagram```</a> te bekijken
 
 
 # 6. Inrichten project IntelliJ
