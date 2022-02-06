@@ -115,14 +115,14 @@ Ik heb voornamelijk gekeken naar de praktische kant van mijn applicatie en na mi
 Klik hier om de <a href="https://github.com/gmhislop/flex-rit/blob/31e352a142eb2c2f487f5ac95bf8320c159c9353/Images/Communication%20Diagram1.pdf" target="_top">```UML Use-case Diagram``` versie 1</a> te bekijken
 
 ```
-User 	    	| Register (POST, PUT).
-User 	    	| Login (POST, PUT).
-Admin 	    	| Trip management record (GET, PUT, POST, DELETE). 
-Admin/ User	    | User management record (GET, PUT, POST, DELETE)
-Admin/ User 	| Payment management record (GET, PUT, POST, DELETE)
-Admin/ User 	| Manage report management record (GET, PUT, POST, DELETE)
-Admin/ User 	| Vehicle management record (GET, PUT, POST and DELETE)
-Admin/ User 	| Subscription management record (GET, PUT, POST and DELETE)
+USER 	    	  | REGISTER (POST, PUT).
+USER 	    	  | LOGIN (POST, PUT).
+ADMIN 	    	| TRIP MANAGEMENT RECORD (GET, PUT, POST, DELETE). 
+ADMIN/ USER	  | USER MANAGEMENT RECORD (GET, PUT, POST, DELETE)
+ADMIN/ USER 	| PAYMENT MANAGEMENT RECORD (GET, PUT, POST, DELETE)
+ADMIN/ USER 	| MANAGE REPORT MANAGEMENT RECORD (GET, PUT, POST, DELETE)
+ADMIN/ USER 	| VEHICLE MANAGEMENT RECORD (GET, PUT, POST AND DELETE)
+ADMIN/ USER 	| SUBSCRIPTION MANAGEMENT RECORD (GET, PUT, POST AND DELETE)
 ```
 
 ### Na verbetering zag de UML Use-case diagram er zo uit:
