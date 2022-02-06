@@ -91,16 +91,16 @@ Uiteindelijk ik mijn keus uitgegaan naar Trello. Trello is een ontzettend handig
 
 De volgende stappen heb ik ondernomen: 
 
-[x] Ideefase
-[x] Functioneel ontwerp
-[x] Inrichten IntelliJ
-[x] Opzetten Github/Git
-[x] Installeren Spring boot, Maven.
-[x] Opzetten Postman
-[x] Onderzoek en installeren Database 
-[x] Testing
-[x] Technisch ontwerp
-[x] Opstellen ReadMe
+- [x] Ideefase
+- [x] Functioneel ontwerp
+- [x] Inrichten IntelliJ
+- [x] Opzetten Github/Git
+- [x] Installeren Spring boot, Maven.
+- [x] Opzetten Postman
+- [x] Onderzoek en installeren Database 
+- [x] Testing
+- [x] Technisch ontwerp
+- [x] Opstellen ReadMe
 
 
 
