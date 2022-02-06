@@ -44,13 +44,13 @@ De opdracht luidde als volgt: De student maak een multi-tier web applicatie door
 
 De webapplicatie moet minimaal voldoen aan de volgende eisen:
 
-De backend en de database zijn gescheiden en kunnen los van elkaar op verschillende systemen draaien;
-De backend is volgens OOP ontwikkeld met behulp van Java & Spring;
-De database is relationeel;
-Je hebt gebruik gemaakt van versiebeheer (GIT);
-Maakt gebruik van een build system (maven);
-Bevat unit-testen;
-Is beveiligd en bevat minstens twee user-rollen.
+- De backend en de database zijn gescheiden en kunnen los van elkaar op verschillende systemen draaien;
+- De backend is volgens OOP ontwikkeld met behulp van Java & Spring;
+- De database is relationeel;
+- Er is gebruik gemaakt van versiebeheer (GIT);
+- Maakt gebruik van een build system (maven);
+- Bevat unit-testen;
+- Is beveiligd en bevat minstens twee user-rollen.
 
 Voordat wij akkoord kregen om te beginnen werd er eerst aandacht besteedt aan de ideefase. De studenten kregen de gelegenheid om 3-5 ideeën voor te stellen en gelijktijdig na te denken over onderwerpen zoals use cases, user rollen en haalbaarheid. In het volgend hoofdstuk zal ik volledig toelichten hoe mijn proces verlopen is en tegen welke dilemma's ik aanliep.
 
