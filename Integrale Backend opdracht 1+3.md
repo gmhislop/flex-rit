@@ -4,7 +4,7 @@
   firstName = "Giovanni",
   lastName = "Hislop",
   schoolName = "Hogerschool Novi"
-  assignmentName = "Integreale Backend opdracht 1+3"
+  assignmentName = "Integrale Backend opdracht 1+3"
   
 }
 ```
